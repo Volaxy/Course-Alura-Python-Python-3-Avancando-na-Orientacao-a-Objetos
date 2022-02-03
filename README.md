@@ -10,6 +10,12 @@ URL do curso -> [Python 3 - Avançando na Orientação a Objetos](https://cursos
 
 ![Python 3 - Avançando na Orientação a Objetos](https://www.alura.com.br/assets/api/share/curso-python-3-avancando-orientacao-objetos.png)
 
+## Atalhos &#x2328;
+* Re-ordenar linhas no Pycharm:
+    * 1º: Segurar ***CTRL** + ***SHIFT*** + ***ARROW_UP***/***ARROW_DOWN***.
+* Duplicar linha no Pycharm:
+    * 1º: Apertar ***CTRL*** + ***D*** na linha que deseja duplicar.
+
 ## 01 - Relembrando Classes e Objetos &#x1F516;
 * Criação da classe.
 * Definição de métodos assessores.
@@ -62,3 +68,20 @@ URL do curso -> [Python 3 - Avançando na Orientação a Objetos](https://cursos
 ### 03 - Representação Textual de Objetos
 * Um método especial tem o apelido de ***dunder***, por causa do **D**ouble **Under**score, que são métodos como o `__init__` e o `__str__` na classe.
 * O `def __str__(self):` retorna uma representação em formato de *str* de um objeto.
+
+## 04 - Quando não Usar Herança &#x1F516;
+* Herança de um tipo *built-in* (nativo).
+* Vantagens da herança de um iterável.
+* Desvantagem de fazer herança.
+
+### 01 - Criando a Playlist
+* A função `len(LIST)` retorna o tamanho de uma **lista**.
+* É conhecido como **encapsulamento**, o desconhecimento de toda a estrutura interna de um objeto, deixando para fora apenas o que se quer que interaja com o mundo externo.
+
+### 02 - Reaproveitando um List
+* `VARIABLE_NAME in OBJECT` para verificar se um objeto está contido dentro de outro objeto que seja uma **lista**.
+* A palavra **in** no `for x in y` espera um **iterável**, já que ele itera sobre uma listagem qualquer.
+* Um ***sizeable*** é um objeto que **consegue informar seu próprio tamanho**.
+
+### 03 - Fugindo da Complexidade
+* Retirar herança da classe **list** para reduzir a complexidade do código.
