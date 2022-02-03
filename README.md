@@ -44,3 +44,21 @@ URL do curso -> [Python 3 - Avançando na Orientação a Objetos](https://cursos
     * **Reutilização de informações da classe mãe**: As classes filhas herdam todos os métodos e atributos, assim é possível reaproveitar o código feito pela classe mãe.
     * **Extender a classe mãe**: Por exemplo o `__init__` das classes filhas e a possível utilização do `__init__` da classe mãe para algo mais genérico ou específico.
 * Ao criar uma função nas classes filhas, essa função só será visível para a classe filha.
+
+## 03 - Reduzindo ifs com Polimorfismo &#x1F516;
+* Polimorfismo.
+* Relacionamento **é um**.
+* Representação textual de um objeto.
+
+### 01 - Polimorfismo
+* Em **Herança**, as classes filhas **são** a classe mãe, isso se chama **polimorfismo**.
+* A função `hasattr(OBJECT, ATTRIBUTE_NAME)` verifica se o atributo existe em uma variável.
+* Criar `if` de uma linha usando `VARIABLE = (FUNCTION_IF_CONDITION_IS_TRUE) if (CONDITION) else (FUNCTION_IF_CONDITION_IS_FALSE)`.
+
+### 02 - Reduzindo ifs
+* Uma **classe coesa** é a classe que sabe qual a sua responsabilidade, e quando ela não faz mais do que ela deve fazer.
+* O `str(VARIABLE)` pode chamar o método interno de uma variável que não seja uma **string** para representar a variável de forma textual.
+
+### 03 - Representação Textual de Objetos
+* Um método especial tem o apelido de ***dunder***, por causa do **D**ouble **Under**score, que são métodos como o `__init__` e o `__str__` na classe.
+* O `def __str__(self):` retorna uma representação em formato de *str* de um objeto.
