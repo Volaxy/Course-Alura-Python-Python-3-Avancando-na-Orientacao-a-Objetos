@@ -1,4 +1,5 @@
 class Movie:
+    # In Python, you should set as private only what you want to protect, to avoid code complexity
     def __init__(self, name, year, duration):
         self.__name = name.title()
         self.year = year
@@ -18,4 +19,4 @@ class Movie:
         return self.__likes
 
     def get_like(self):
-        self.likes += 1
+        self.__likes += 1

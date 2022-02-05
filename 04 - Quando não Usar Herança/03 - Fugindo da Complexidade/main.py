@@ -8,6 +8,7 @@ def main():
     atlanta = Series('atlanta', 2018, 2)
     tmep = Movie('everybody in panic', 1999, 100)
     demolisher = Series('demolisher', 2016, 2)
+    demolisher2 = Series('demolisher 2', 2016, 2)
 
     tmep.get_like()
     demolisher.get_like()
@@ -18,7 +19,10 @@ def main():
     for program in playlist.programs:
         print(program)
 
-    print(f"Playlist Length: {playlist.listing}")
+    print(f"\nPlaylist Length: {len(playlist.programs)}", end="\n\n")
+
+    print(f"It's present?: {avengers in playlist.programs}")
+    print(f"It's present?: {demolisher2 in playlist.programs}")
 
 
 if __name__ == '__main__':

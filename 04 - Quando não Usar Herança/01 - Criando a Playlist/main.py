@@ -9,11 +9,9 @@ def main():
     tmep = Movie('everybody in panic', 1999, 100)
     demolisher = Series('demolisher', 2016, 2)
 
-    tmep.get_like()
-    demolisher.get_like()
-
     programs = [avengers, atlanta, tmep, demolisher]
-    playlist = Playlist("weekend playlist", programs)
+
+    playlist = Playlist("Weekend Playlist", programs)
 
     for program in playlist.programs:
         print(program)

@@ -1,10 +1,12 @@
-from playlist import Playlist
+from abc import ABC
+
+from collections.abc import MutableSequence
+from numbers import Complex
 
 
-def main():
-    movies = Playlist()
+class Number(Complex):
+    def __getitem__(self, item):
+        super().__getitem__()
 
 
-if __name__ == '__main__':
-    main()
- 
+movies = Number()

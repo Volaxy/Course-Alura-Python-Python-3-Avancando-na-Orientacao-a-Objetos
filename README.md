@@ -44,6 +44,8 @@ URL do curso -> [Python 3 - Avançando na Orientação a Objetos](https://cursos
 * Atribuir os atributos em comum nas classes `Movie` e `Series` para a classe `Program`.
 * Usar o `(MOTHER_CLASS)` logo após o nome da classe para declarar suas **classes mãe**.
 * Ao fazermos uso dos dois *underscores*, deixamos o atributo privado. Na realidade, o que acontece é que com isso `__` será transformado em uma outra variável, e esta ação recebe o nome de ***name mangling***.
+* Os **attributos privados** da classe mãe **NÃO SÃO PASSADOS** por herança para a classe filha.
+* Convenção de somente usar 1 `_` antes do nome do atributo para evitar confusões com **herança** e seus **atributos**.
 
 ### 02 - Reutilizando Ainda Mais
 * Usar o construtor da classe mãe usando `super().__init__(PARAMETERS)`.
@@ -100,11 +102,38 @@ URL do curso -> [Python 3 - Avançando na Orientação a Objetos](https://cursos
 * A **herança** é uma boa ideia para implementar nos casos de:
     * **Interface**, quando queremos resolver questões relativas a polimorfismo.
     * **Reuso** do código, ou remoção de duplicações.
+* A **Herança** é uma **extensão** e a frase chave para a sua definição é "***é um***", ou seja, se pega todo o código da super classe e transmite para a classe filha todos os seus comportamentos.
+* Ao usar **composição**, a sua frase chave é "***tem um***", ou seja, se pode ter uma lista interna dentro da classe, sem extender a classe `list`.
+* O ***duck typing*** é uma maneira de se dizer que uma classe só precisa implementar um método específico da outra classe, sem extende-la totalmente.
 
 ### 02 - Modelo de Dados Python
 * Para dizer que uma classe tem tamanho, usamos o `def __len__(self)`.
-* No ***Python Data Model***, todo objeto em Python pode se comportar de forma a ser compatível e mais próximo à linguagem, e de toda a ideia idiomática dela.
+* No ***Python Data Model***, todo objeto em Python pode se comportar de forma a ser compatível e mais próximo à linguagem, e de toda a ideia idiomática dela, as principais dela são:
+    * **Inicialização**: `__init__`.
+    * **Representação**: `__str__`, `__repr__`.
+    * **Container, sequência**: `__contains__`, `__iter__`, `__len__`, `__getitem__`.
+    * **Numéricos**: `__add__`, `__sub__`, `__mul__`, `__mod__`.
+
+    Seu funcionamento é respectivo à:
+    * **Inicialização**: `obj = New()`.
+    * **Representação**: `print(obj)`, `str(obj)`, `repr(obj)`.
+    * **Container, sequência**: `item in obj`, `for i in obj`, `len(obj)`, `obj[2, 3]`.
+    * **Numéricos**: `obj + other_obj`, `obj * other_obj`.
 * No **Python**, existe a ideia de **protocolo**. Isto quer dizer que nosso objeto precisa se comportar daquele modo específico, sendo necessária a implementação de métodos que comportem segundo um protocolo específico.
 
 ### 03 - Classes Abstratas ou ABCs
-* A classe `ABC` do **Python** é uma biblioteca de classes abstratas.
+* A classe `ABC` do **Python** é uma biblioteca de classes abstratas que define métodos que as classes mãe implementam, e toda sub-classe dessa classe mãe deve implementar esses métodos.
+
+## 06 - Herança Múltipla &#x1F516;
+* Herança múltipla.
+* Resolução da ordem de chamada de métodos.
+* *Mixins*.
+
+### 01 - Mais de uma Classe Mãe
+* Para usar **Herança Múltipla**, usamos `class CLASS_NAME(1_CLASS, 2_CLASS)`.
+
+### 02 - Resolução de Métodos
+* Para escolher o método que será executado na herança múltipla, ele primeiro procura na **classe atual**, depois ele procura na **1ª classe mãe**, em seguida para as classes mãe das classes mãe.
+
+### 03 - Mixins
+* Para fazer uma classe herdar um comportamento mas sem poluir as sub-classes, usa-se o **Mixin**.

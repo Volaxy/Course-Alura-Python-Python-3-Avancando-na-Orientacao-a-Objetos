@@ -1,6 +1,6 @@
 class Program:
     def __init__(self, name, year):
-        self._name = name
+        self._name = name.title()
         self.year = year
         self._likes = 0
 

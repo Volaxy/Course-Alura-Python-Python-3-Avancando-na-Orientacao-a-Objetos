@@ -17,4 +17,4 @@ class Program:
         return self._likes
 
     def get_like(self):
-        self.likes += 1
+        self._likes += 1

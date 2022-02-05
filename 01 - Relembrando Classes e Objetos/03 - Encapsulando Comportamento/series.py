@@ -18,4 +18,4 @@ class Series:
         return self.__likes
 
     def get_like(self):
-        self.likes += 1
+        self.__likes += 1
