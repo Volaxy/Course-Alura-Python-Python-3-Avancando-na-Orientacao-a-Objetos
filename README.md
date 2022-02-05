@@ -10,6 +10,9 @@ URL do curso -> [Python 3 - Avançando na Orientação a Objetos](https://cursos
 
 ![Python 3 - Avançando na Orientação a Objetos](https://www.alura.com.br/assets/api/share/curso-python-3-avancando-orientacao-objetos.png)
 
+## Siglas &#x1F5FA;
+* **ABC** - **A**bstract **B**ase **C**lasses.
+
 ## Atalhos &#x2328;
 * Re-ordenar linhas no Pycharm:
     * 1º: Segurar ***CTRL** + ***SHIFT*** + ***ARROW_UP***/***ARROW_DOWN***.
@@ -85,3 +88,23 @@ URL do curso -> [Python 3 - Avançando na Orientação a Objetos](https://cursos
 
 ### 03 - Fugindo da Complexidade
 * Retirar herança da classe **list** para reduzir a complexidade do código.
+
+## 05 - Duck Typing e um Modelo de Dados &#x1F516;
+* *Duck typing*.
+* *Python data (object) model*.
+* *Dunder methods*.
+* Uso de ABCs.
+
+### 01 - Se anda como um Pato
+* Para dizer para o **Python** que a classe é um **iterável**, usamos o `def __getitem__(self, item)`.
+* A **herança** é uma boa ideia para implementar nos casos de:
+    * **Interface**, quando queremos resolver questões relativas a polimorfismo.
+    * **Reuso** do código, ou remoção de duplicações.
+
+### 02 - Modelo de Dados Python
+* Para dizer que uma classe tem tamanho, usamos o `def __len__(self)`.
+* No ***Python Data Model***, todo objeto em Python pode se comportar de forma a ser compatível e mais próximo à linguagem, e de toda a ideia idiomática dela.
+* No **Python**, existe a ideia de **protocolo**. Isto quer dizer que nosso objeto precisa se comportar daquele modo específico, sendo necessária a implementação de métodos que comportem segundo um protocolo específico.
+
+### 03 - Classes Abstratas ou ABCs
+* A classe `ABC` do **Python** é uma biblioteca de classes abstratas.
